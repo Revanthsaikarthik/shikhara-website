@@ -4,7 +4,6 @@ import shikara from './assets/shikara.jpeg'
 // 1. Save your uploaded mountain image as "sikara.jpeg"
 // 2. Place it in the /public folder of your React project.
 const BACKGROUND_IMAGE = shikara; // Update this path if your image is located elsewhere
-console.log(BACKGROUND_IMAGE); 
 const App = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -43,13 +42,13 @@ const App = () => {
       minWidth: '320px', 
       padding: '35px', 
       borderRadius: '16px', 
-      boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+      boxShadow: '0 10px 30px rgba(27, 26, 26, 0.92)',
       backgroundColor: '#fff',
       border: '1px solid #f0f0f0'
     },
     input: { width: '100%', padding: '14px', margin: '10px 0 20px 0', border: '1px solid #ddd', borderRadius: '8px', boxSizing: 'border-box', fontSize: '16px' },
-    button: { width: '100%', padding: '16px', backgroundColor: '#e2ddcc', color: 'black', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '16px' },
-    locationText: { color: '#141413', fontWeight: 'bold', fontSize: '1.4rem', marginBottom: '10px', display: 'block' },
+    button: { width: '100%', padding: '16px', backgroundColor: '#deddda', color: 'black', border: 'none', borderRadius: '8px', fontWeight: 'bold', cursor: 'pointer', fontSize: '16px' },
+    locationText: { color: '#191918', fontWeight: 'bold', fontSize: '1.4rem', marginBottom: '10px', display: 'block' },
     featureList: { listStyle: 'none', padding: 0, marginTop: '30px' },
     featureItem: { display: 'flex', alignItems: 'center', marginBottom: '20px', fontSize: '1.1rem' },
     icon: { fontSize: '1.6rem', marginRight: '15px' }
@@ -60,9 +59,11 @@ const App = () => {
       {/* Header Section */}
       <header style={styles.hero}>
         <h1 style={{ fontSize: '4.5rem', margin: '0', fontWeight: '800' }}>Shikhara</h1>
-        <h2 style={{ fontSize: '2.5rem', margin: '0', fontWeight: '500' }}>Own your peak</h2>
-        <h3 style={{ fontSize: '2.5rem', margin: '0', fontWeight: '400' }}>&</h3>
-        <p style={{ fontSize: '1.5rem', fontStyle: 'italic', color: '#ea9d04' }}>Build Your Sanctuary</p>
+        <div id="location-info" style={{ marginTop: '40px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <h2 style={{ fontSize: '2.5rem', margin: '0', fontWeight: '500' }}>Own your peak</h2>
+          <h3 style={{ fontSize: '2.5rem', margin: '0', fontWeight: '400' }}>&</h3>
+          <p style={{ fontSize:"2.5rem", fontStyle: 'italic', color: '#f9f5ed', marginTop: '20px' }}>Build Your Sanctuary</p>
+        </div>
       </header>
 
       {/* Main Section */}
