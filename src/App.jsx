@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
+import shikara from './assets/shikara.jpeg'
 // INSTRUCTIONS:
 // 1. Save your uploaded mountain image as "sikara.jpeg"
 // 2. Place it in the /public folder of your React project.
-const BACKGROUND_IMAGE = "/shikhara.jpg"; // Update this path if your image is located elsewhere
+const BACKGROUND_IMAGE = shikara; // Update this path if your image is located elsewhere
 console.log(BACKGROUND_IMAGE); 
 const App = () => {
   const [formData, setFormData] = useState({
