@@ -1,0 +1,114 @@
+/* src/components/ContactForm.css */
+
+/* Variables for easy theme management */
+:root {
+  --primary-color: #6366f1; /* Main button color */
+  --primary-color-dark: #4f46e5; /* Hover button color */
+  --text-primary: #1e1f20;
+  --text-secondary: #2c2c39;
+  --border-color: #e2e8f0;
+  --focus-ring: 0 0 0 3px rgba(0, 0, 8, 0.15); /* Softer, colored focus ring */
+  --shadow-modern: 0 10px 40px rgba(0, 0, 0, 0.08); /* More subtle, clean shadow */
+}
+
+/* 1. Form Card Container */
+.form-card {
+  max-width: 400px; /* Better default size */
+  margin: 0 auto; /* Keep it centered */
+  padding: 35px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: var(--shadow-modern);
+  border: 1px solid #f1f5f9; /* Extra subtle border */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Titles */
+.form-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.form-card p {
+  margin: 0 0 30px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* 2. Form Stack (Gap between elements) */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Clean vertical stacking */
+}
+
+/* 3. Input Group (Label & Input) */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+/* 4. The Form Input Fields */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Crucial for padding/width */
+  transition: all 0.2s ease; /* Smooth transitions for focus and colors */
+  background-color: #dcddee;
+}
+
+.form-input::placeholder {
+  color: #222324; /* Lighter placeholder */
+}
+
+/* Input Focus State (Clear outline) */
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: var(--focus-ring);
+}
+
+/* 5. The Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Button Interactions */
+.submit-btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.submit-btn:active {
+  transform: translateY(1px); /* Pressed effect */
+}
+
+/* 6. Disabled State (When isLoading is true) */
+.submit-btn:disabled {
+  background-color: #cbd5e1; /* Faded gray */
+  color: #94a3b8; /* Faded text */
+  cursor: not-allowed;
+  pointer-events: none; /* Block all interactions */
+}
