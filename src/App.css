@@ -1,7 +1,7 @@
 /* Container & Global */
-body{
-    height : 100vh;
-  width : 100vw ;
+body {
+  height: 100vh;
+  width: 100vw;
 }
 .app-container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -9,7 +9,6 @@ body{
   margin: 0;
   padding: 0;
   background-color: #fff;
-  
 }
 
 /* Hero Section */
@@ -23,7 +22,9 @@ body{
   color: white;
   text-align: center;
   /* We handle the background image path here */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('./assets/shikara.jpeg');
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./assets/shikara.jpeg");
   background-size: cover;
   background-position: center;
 }
@@ -92,24 +93,28 @@ body{
 }
 
 /* Feature List */
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 30px;
-}
-
 .feature-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: flex-start; /* CRITICAL: Aligns icon and text to the top */
+  gap: 20px; /* Consistent distance between icon and text */
+  margin-bottom: 25px;
+  text-align: left; /* Ensures text starts at the left */
   font-size: 1.1rem;
 }
 
 .feature-icon {
-  font-size: 1.6rem;
-  margin-right: 15px;
+  flex-shrink: 0; /* CRITICAL: Prevents the icon from getting squashed */
+  font-size: 2.5rem; /* Your large icon size */
+  line-height: 1; /* Prevents extra spacing above/below icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.feature-text-container {
+  /* This ensures the text stays in its own column */
+  display: flex;
+  flex-direction: column;
+}
 /* Footer */
 .app-footer {
   text-align: center;
