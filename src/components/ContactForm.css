@@ -68,6 +68,7 @@
   box-sizing: border-box; /* Crucial for padding/width */
   transition: all 0.2s ease; /* Smooth transitions for focus and colors */
   background-color: #dcddee;
+  color: #1e1f20;
 }
 
 .form-input::placeholder {
