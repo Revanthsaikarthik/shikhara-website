@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #1a202c;
-  color: white;
+  color: #f9f5ed;
   text-align: center;
   /* We handle the background image path here */
   background-image:
@@ -33,6 +33,7 @@ body {
   font-size: 4.5rem;
   margin: 0;
   font-weight: 800;
+  color: #f9f5ed;
 }
 
 .hero-subtitle-wrapper {
@@ -46,6 +47,7 @@ body {
   font-size: 2.5rem;
   margin: 0;
   font-weight: 500;
+  color: #f9f5ed;
 }
 
 .hero-tagline {
